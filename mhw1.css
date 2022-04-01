@@ -1,0 +1,251 @@
+﻿body{
+    margin:0;
+    font-family: 'Roboto', Times, serif;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-weight:normal;
+}
+
+body header {
+    font-family: 'Merriweather',Times;
+    position:relative;
+    color: white;
+    height: 500px;
+    width: 100%;
+    background-image: url("bg-header.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+header::before {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+a
+{
+    cursor:pointer;
+}
+
+#login:hover{
+    background-color: white;
+    color:black;
+}
+body nav{
+    font-family:'Heebo',serif;
+    font-weight: bold;
+    font-style:normal;
+    height: 15%;
+    background-color:rgba(0,0,0,0.2);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1;
+}
+
+#logo {
+    font-family: 'Lobster',serif;
+    font-weight: normal;
+    margin: 20px;
+    font-size: 20px;
+}
+
+#links {
+    width: 650px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+#menu {
+    display: none;
+  }
+  
+  #menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 10px;
+  }
+
+#login
+{
+    padding:15px;
+    border: 2px solid white;
+    border-radius:50px;
+}
+#box_header {
+    z-index:1;
+    margin: auto;
+    text-align: center;
+}
+#box_header a {
+    line-height:6;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgb(128, 209, 221);
+    border: 2px solid black;
+}
+
+#box_header a:hover{
+    background-color: rgba(128, 209, 221,0.75);
+}
+
+#main {
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+    background-color: white;
+}
+
+div.notizia {
+    border: 1px solid black;
+    width: 60%;
+    height: 45%;
+    display: flex;
+    background-color: rgb(241 241 241);
+    margin-top: 20px;
+}
+
+.testo {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+}
+
+.testo h1
+{
+    margin-bottom: -5px;
+    color: black;
+}
+.testo p {
+
+    font-style: italic;
+    color: rgb(105 105 105);
+}
+
+.b_news{ 
+    color: rgb(183 5 5);
+    margin-bottom:10px;
+}
+
+.b_news:hover{
+    text-decoration:underline;
+}
+
+#img_resp{
+    display:none ;
+}
+
+
+
+.div_img {
+    width: 40%;
+    height: auto;
+    min-height: 150px;
+    max-width: 300px;
+    max-height: 500px;
+    margin: 10px;
+}
+
+.div_img img {
+      
+    display:block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    max-width: 300px;
+    max-height: 500px;
+}
+
+footer {
+    font-family: 'IBM Plex Sans Arabic',serif;
+    display:flex;
+    justify-content:space-between;
+    background-color: rgb(0,0,0);
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 50px;
+    color: rgba(255, 255, 255, .8);
+}
+
+
+@media (max-width: 550px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    #box_header{
+        line-height:40px;
+    }
+
+
+    section#main {
+        font-size: 1rem;
+    }
+
+    div.notizia {
+        width: 80%;
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testo p,h1{
+        margin-left:15px;
+        margin-right:15px;
+    }
+
+    .b_news {
+        margin-left:20px;
+    }
+
+    .div_img{
+        width:310px;
+        height: auto;
+        min-height: 150px;
+        max-width: 325px;
+
+    }
+
+    footer {
+        flex-direction: column;
+    }
+    footer address{
+        margin-bottom: 20px;
+    }
+    #img_resp{
+        display: inline-block;
+    }
+
+    #img_resp2{
+        display: none;
+    }
+
+    #links{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+}
+
